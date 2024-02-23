@@ -1,0 +1,199 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-family: 'Dancing Script', cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  h1 {
+    margin: 0; /* Remove default margin for better visual appearance */
+    transition: color 0.3s ease; /* Add transition for color property */
+  }
+  
+  /* Hover effect on heading */
+  header:hover h1 {
+    color: #e1cd7f; /* Change the heading color on hover */
+  }
+  span{
+    color: yellowgreen;
+  }
+  
+  main {
+    max-width: 800px;
+    height:500 ;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-gap: 20px; /* Adjust the gap between columns and rows as needed */
+  }
+  
+  .planet-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    overflow: scroll;
+  }
+  
+  .planet-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .planet-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .planet-card p {
+    margin: 0;
+  }
+  /* Add these styles to your existing CSS */
+
+.planet-card {
+    perspective: 1000px;
+    width: 95%; /* Adjust the width as needed */
+    margin: 10px;
+    box-sizing: border-box;
+    background-color: #f0f0f0; /* Default background color */
+  }
+  
+  /* You can add different background colors for each card */
+  .planet-card:nth-child(2n) {
+    background-color: #d0d0d0; /* Even index card color */
+  }
+  
+  .planet-card:nth-child(2n+1) {
+    background-color: #d0d0d0; /* Odd index card color */
+  }
+  
+  .card-content {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    width: 100%;
+    height: 200px; /* Adjust the height as needed */
+  }
+  
+  .planet-card:hover .card-content {
+    transform: rotateY(180deg);
+  }
+  
+  .additional-details {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(208, 179, 251); /* Light blue color when flipped */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  
+  /* Responsive Styles */
+  @media only screen and (max-width: 768px) {
+    .planet-card {
+      width: 100%; /* Full width on smaller screens */
+    }
+  }
+  /* Add these styles to your existing CSS */
+
+.d-flex {
+    display: flex;
+  }
+  
+  .justify-content-between {
+    justify-content: space-between;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Add these styles to your existing CSS */
+
+/* Add these styles to your existing CSS */
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .pagination .page-number {
+    font-size: 16px;
+    font-weight: bold;
+    flex-grow: 1; /* Ensure flexibility for center alignment */
+    text-align: center;
+  }
+  
+  
+  
+  /* Additional styles for positioning */
+  .d-flex {
+    display: flex;
+  }
+  
+  .justify-content-between {
+    justify-content: space-between;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Responsive Styles */
+  
+  @media only screen and (max-width: 600px) {
+    main {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+  }
+  
+/* src/components/PlanetCard.css */
+.residents-details {
+    margin-top: 10px;
+    transform: rotateY(360deg); /* Ensure that the back-face content is not visible initially */
+    max-height: 150px; /* Set a maximum height for the residents-details */
+    overflow-y: auto; /* Add a scrollbar when the content exceeds the maximum height */
+    background-color: #fff; /* Background color without hover effect */
+  }
+  
+  .planet-card .residents-details {
+    opacity: 1;
+    background-color: #d0d0d0
+  }
+  
