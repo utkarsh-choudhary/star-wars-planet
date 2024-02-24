@@ -1,4 +1,3 @@
-// src/components/PlanetCard.jsx
 import React, { useState, useEffect } from 'react';
 
 const PlanetCard = ({ planet }) => {
@@ -22,7 +21,7 @@ const PlanetCard = ({ planet }) => {
           return null;
         }
       }));
-      setResidentDetails(residentData.filter(Boolean)); // Filter out null values
+      setResidentDetails(residentData.filter(Boolean)); 
     };
 
     fetchResidents();
